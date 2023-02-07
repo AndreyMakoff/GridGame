@@ -1,0 +1,54 @@
+.banner
+  &-img 
+    background-color: $color-blue-dark
+    background: url(../src/img/Foto-1.png) center/cover no-repeat
+    grid-column: full-start/col-end 4
+    display: grid
+    grid-template-columns: repeat(16, 1fr) 
+    grid-template-rows: repeat(24, 1fr)
+    @include respond(tab-port)
+       grid-column: 1/-1
+       grid-template-rows: repeat(12, 1fr)
+    &__img1
+      width: 100%
+      grid-column: 3/15
+      grid-row: 3/12
+      @include respond(tab-port)
+        width: 100%
+        grid-column: 2/11
+        grid-row: 2/9
+      
+    &__img2
+      width: 100%
+      grid-column: 5/-1
+      grid-row: 10/23
+      transform: translateX(2rem)
+      @include respond(tab-port)
+        width: 100%
+        grid-column: 6/16
+        grid-row: 5/12
+
+  &-text 
+    background-color: $color-blue-dark
+    grid-column: col-start 5/full-end
+    padding-left: 4vh
+    padding-right: 4vh
+    display: grid
+    align-content: center
+    justify-items: start
+    @include respond(tab-port)
+       grid-column: 1/-1
+       grid-row: 5/6
+    &__paragraph
+      font-size: 1.6rem
+      margin-bottom: 4rem
+      color: white
+      font-weight: 400
+      line-height: 113%
+      
+      
+// можно сделать на flexaX 
+    // display: flex
+    // flex-direction: column
+    // justify-content: center
+    // align-items: flex-start
